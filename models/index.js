@@ -16,7 +16,7 @@ User.hasMany(Review, {
   foreignKey: 'user_id'
 });
 
-Review.belongsTo(User {
+Review.belongsTo(User, {
   foreignKey: 'user_id'
 });
 

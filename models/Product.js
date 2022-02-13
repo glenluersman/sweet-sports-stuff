@@ -17,7 +17,11 @@ Product.init(
     },
     category_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'category',
+        key: 'id'
+      }
     },
     price: {
       type: DataTypes.DECIMAL(10,2),
@@ -42,5 +46,5 @@ Product.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product'
-  }
-)
+  } 
+);

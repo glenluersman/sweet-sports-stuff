@@ -44,7 +44,11 @@
 
 [glenluersman](https://github.com/glenluersman)
 
-- See also the list of [contributors](https://github.com/glenluersman/sweet-sports-stuff/contributors) who participated in this project.
+[cleancodequeen](https://github.com/cleancodequeen)
+
+[ileachy](https://github.com/ileachy)
+
+[ShatteredChungus](https://github.com/ShatteredChungus)
 
 ## <img id="questions" src="https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-dark/menu-categories/questions-alt.png?raw=true" style="height: 40px">
 

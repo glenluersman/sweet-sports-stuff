@@ -7,8 +7,6 @@ body {
 }
 
 .nav {
-    height: 100%;
-    width: 100%;
     padding: 15px 0 15px 0;
     background-color:  #bb0000;
 }
@@ -45,7 +43,7 @@ body {
     font-size: 3.5rem;
     font-weight: 500;
     text-shadow: 2px 2px #460000dc;
-    margin: 10px 0 5px 0;
+    margin: 150px 0 5px 0;
 }
 
 .hero-subtitle {
@@ -83,10 +81,27 @@ body {
     width: 250px;
 }
 
+.banner {
+    background-color: #000;
+    color: #fff;
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+}
+
+.banner-sale {
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+.disclaimer {
+    color:rgba(255, 255, 255, 0.75);
+}
+
 .product-section {
     background-color: #fff;
     width: 100%;
-    height: 1000px;
+    
 }
 
 .products-container h1 {
@@ -116,10 +131,14 @@ body {
     padding: 25px;
 }
 
-.card-image figure {
-    margin: 10px;
+.card-image {
     width: 200px;
     height: 200px;
+}
+
+.card-image figure {
+    margin: 10px;
+
 }
 
 footer {

@@ -6,30 +6,16 @@ const { Product, User, Category, Review } = require("../models");
 router.get("/", (req, res) => {
   Category.findAll({
     attributes: ["id", "category_name"],
-    include: [
-      {
-        model: "",
-        attributes: "",
-        include: {
-          model: "",
-          attributes: "",
-        },
-      },
-      {
-        model: "",
-        attributes: [],
-      },
-    ],
   })
-    .then((dbPostData) => {
-      const items = dbPostData.map((post) =>
-        post.get({
+    .then((dbCategoryData) => {
+      const categories = dbCategoryData.map((category) =>
+        category.get({
           plain: true,
         })
       );
 
       res.render("homepage", {
-        posts,
+        categories,
         loggedIn: req.session.loggedIn,
       });
     })
@@ -41,37 +27,22 @@ router.get("/", (req, res) => {
 
 //get single item
 router.get("/post/:id", (req, res) => {
-  post
-    .findOne({
-      where: {
-        id: req.params.id,
-      },
-      attributes: [],
-      include: [
-        {
-          model: "",
-          attributes: "",
-          include: {
-            model: "",
-            attributes: [],
-          },
-        },
-        {
-          model: "",
-          attributes: [],
-        },
-      ],
-    })
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+  Category.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: ["id", "category_name"],
+  })
+    .then((dbCategoryData) => {
+      if (!dbCategoryData) {
+        res.status(404).json({ message: "No category found with this id" });
         return;
       }
 
-      const post = dbPostData.get({ plain: true });
+      const category = dbCategoryData.get({ plain: true });
 
       res.render("single-post", {
-        post,
+        category,
         loggedIn: req.session.loggedIn,
       });
     })

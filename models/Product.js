@@ -30,17 +30,9 @@ Product.init(
         isDecimal: true
       }
     },
-    size: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    color: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    stock: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+    product_desc: {
+      type: DataTypes.TEXT,
+      allowNull: false
     }
   },
   {

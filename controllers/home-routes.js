@@ -1,28 +1,26 @@
 const router = require("express").Router();
-const { post } = require(".");
 const sequelize = require("../config/connection");
-const {} = require("../models");
+const { Product, User, Category, Review } = require("../models");
 
 //get all
 router.get("/", (req, res) => {
-  post
-    .findAll({
-      attributes: [],
-      include: [
-        {
+  Category.findAll({
+    attributes: ["id", "category_name"],
+    include: [
+      {
+        model: "",
+        attributes: "",
+        include: {
           model: "",
           attributes: "",
-          include: {
-            model: "",
-            attributes: "",
-          },
         },
-        {
-          model: "",
-          attributes: [],
-        },
-      ],
-    })
+      },
+      {
+        model: "",
+        attributes: [],
+      },
+    ],
+  })
     .then((dbPostData) => {
       const items = dbPostData.map((post) =>
         post.get({

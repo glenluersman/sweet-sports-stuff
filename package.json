@@ -1,10 +1,11 @@
 {
   "name": "sweet-sports-stuff",
   "version": "1.0.0",
-  "description": "<p align=\"center\">  <img width=200px height=200px src=\"./images/logo-round-dark.png\" alt=\"Project logo\"></a> </p>",
-  "main": "index.js",
+  "description": "<p align=\"center\">\r  <img width=200px height=200px src=\"./images/logo-round-dark.png\" alt=\"Project logo\"></a>\r </p>",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,13 @@
   },
   "homepage": "https://github.com/glenluersman/sweet-sports-stuff#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "jest": "^27.5.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.16.1"
   }

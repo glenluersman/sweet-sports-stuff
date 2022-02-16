@@ -4,8 +4,9 @@ const { Product, User, Category, Review } = require("../models");
 
 //get all
 router.get("/", (req, res) => {
-  Category.findAll({
-    attributes: ["id", "category_name"],
+  Product.findAll({
+    attributes: ["id", "product_name", "price", "product_desc"],
+    include: [{model: Category, attributes: ['category_name']}]
   })
     .then((dbCategoryData) => {
       const categories = dbCategoryData.map((category) =>

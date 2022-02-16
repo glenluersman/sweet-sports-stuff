@@ -30,9 +30,11 @@
             </div>
         <ul class="navbar-menu navbar-end">
             <li class="navbar-item"><a class="nav-link" href="/">Shop</a></li>
-            <li class="navbar-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
             <li class="navbar-item"><a class="nav-link" href="/login">Login</a></li>
+            {{#if loggedIn}}
+            <li class="navbar-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
             <li class="navbar-item"><a class="nav-link" id="logout">Logout</a></li>
+            {{/if}}
         </ul>
         </nav>
     </header>

@@ -1,47 +1,68 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Sweet Sports Stuff</title>
 
-    <meta name="description" content="Sweet Sports Stuff">
-    <meta name="author" content="Group 4">
+    <meta name="description" content="Sweet Sports Stuff" />
+    <meta name="author" content="Group 4" />
 
     <!--Favicon-->
-    <link rel="icon" type="image/x-icon" href="#">
+    <link rel="icon" type="image/x-icon" href="#" />
 
     <!--Bulma.io CSS File-->
-    <link rel="stylesheet" href="stylesheets/bulma/css/bulma.css">
+    <link rel="stylesheet" href="stylesheets/bulma/css/bulma.css" />
 
     <!--Main CSS Files-->
-    <link rel="stylesheet" type="text/css" href="stylesheets/icons/fontawesome-free/">
-    <link rel="stylesheet" type="text/css" href="stylesheets/icons/simple-line-icons/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/icons/fontawesome-free/"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/icons/simple-line-icons/css/simple-line-icons.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
 
-<body class="container">
+  <body class="container">
     <header class="header has-navbar-fixed-top">
-        <nav class="navbar nav is-fixed-top">
-            <div class="navbar-brand">
-                <h1 class="title is-1">Sweet Sports Stuff</h1>
-            </div>
+      <nav class="navbar nav is-fixed-top">
+        <div class="navbar-brand">
+          <h1 class="title is-1">Sweet Sports Stuff</h1>
+        </div>
         <ul class="navbar-menu navbar-end">
-            <li class="navbar-item"><a class="nav-link" href="/">Shop</a></li>
-            <li class="navbar-item"><a class="nav-link" href="/login">Login</a></li>
-            {{#if loggedIn}}
-            <li class="navbar-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-            <li class="navbar-item"><a class="nav-link" id="logout">Logout</a></li>
-            {{/if}}
+          <li class="navbar-item"><a class="nav-link" href="/">Shop</a></li>
+          <li class="navbar-item"><a
+              class="nav-link"
+              href="/login"
+            >Login</a></li>
+          {{#if loggedIn}}
+            <li class="navbar-item"><a
+                class="nav-link"
+                href="/dashboard"
+              >Dashboard</a></li>
+          {{else}}
+            <li class="navbar-item"><a
+                class="nav-link"
+                id="logout"
+              >Logout</a></li>
+          {{/if}}
         </ul>
-        </nav>
+      </nav>
     </header>
     <main class="content">
-    {{{body}}}
+      {{{body}}}
     </main>
     <footer>
-        <p class="">Copyright 2022. Group 4 Second Project.</p>
+      <p class="">Copyright 2022. Group 4 Second Project.</p>
     </footer>
-</body>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </body>
+</html>

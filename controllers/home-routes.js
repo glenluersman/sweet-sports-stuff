@@ -6,17 +6,17 @@ const { Product, User, Category, Review } = require("../models");
 router.get("/", (req, res) => {
   Product.findAll({
     attributes: ["id", "product_name", "price", "product_desc"],
-    include: [{model: Category, attributes: ['category_name']}]
+    include: [{ model: Category, attributes: ["category_name"] }],
   })
-    .then((dbCategoryData) => {
-      const categories = dbCategoryData.map((category) =>
-        category.get({
+    .then((dbProductData) => {
+      const products = dbProductData.map((product) =>
+        product.get({
           plain: true,
         })
       );
 
       res.render("homepage", {
-        categories,
+        products,
         loggedIn: req.session.loggedIn,
       });
     })

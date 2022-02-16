@@ -33,7 +33,12 @@ Product.init(
     product_desc: {
       type: DataTypes.TEXT,
       allowNull: false
-    }
+    },
+    // image: {
+    //   type: DataTypes.BLOB,
+
+
+    // }
   },
   {
     sequelize,

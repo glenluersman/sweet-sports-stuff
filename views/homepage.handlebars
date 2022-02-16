@@ -2,41 +2,35 @@
   <div>
     <h3>Men's</h3>
   </div>
-  {{#if Product.mens.length}}
   <ol>
-  {{#each product}}
+  {{#each products as |product| }}
   <li>
-  {{> product-info}}
+  {{> product-info product}}
   </li>
   {{/each}}
   </ol>
-  {{/if}}
 </section>
 <section>
   <div>
     <h3>Women's</h3>
   </div>
-  {{#if products.womens.length}}
   <ol>
-  {{#each product}}
+  {{#each products as |product| }}
   <li>
-  {{> product-info}}
+  {{> product-info product}}
   </li>
   {{/each}}
   </ol>
-  {{/if}}
 </section>
 <section>
   <div>
     <h3>Kid's</h3>
   </div>
-  {{#if products.kids.length}}
   <ol>
-  {{#each product}}
+  {{#each products as |product| }}
   <li>
-  {{> product-info}}
+  {{> product-info product}}
   </li>
   {{/each}}
   </ol>
-  {{/if}}
 </section>

@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
 });
 
 //get single item
-router.get("/post/:id", (req, res) => {
+router.get("/review/:id", (req, res) => {
   Category.findOne({
     where: {
       id: req.params.id,
@@ -41,7 +41,7 @@ router.get("/post/:id", (req, res) => {
 
       const category = dbCategoryData.get({ plain: true });
 
-      res.render("single-post", {
+      res.render("product-details", {
         category,
         loggedIn: req.session.loggedIn,
       });

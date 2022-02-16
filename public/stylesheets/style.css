@@ -11,6 +11,7 @@
 
 .nav-menu {
   text-decoration: none;
+  float: right;
 }
 
 .nav-link {
@@ -88,6 +89,10 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.dept-title {
+  text-align: center;
+}
+
 .product-section {
   background-color: #fff;
   width: 100%;
@@ -135,6 +140,9 @@
   display: flex;
 }
 
+.card-content {
+}
+
 .auth {
   margin: 0 auto;
   height: 100%;
@@ -149,7 +157,9 @@ footer {
   background-color: #666;
   color: white;
   padding: 15px;
+  width: 100vw;
 }
+
 main {
   flex: 1 0 auto;
   width: 100%;
@@ -159,4 +169,30 @@ main {
 body {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+form {
+  margin: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 25px;
+}
+
+form input {
+  margin-bottom: 10px;
+  width: 300px;
+  height: 45px;
+  border: 2px solid black;
+}
+
+form button {
+  background-color: #bb0000;
+  width: 125px;
+  height: 35px;
 }

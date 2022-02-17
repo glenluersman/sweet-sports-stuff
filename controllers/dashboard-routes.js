@@ -11,7 +11,7 @@ router.get("/", withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "title", "content"],
+    attributes: ["id", "content"],
   })
     .then((dbReviewData) => {
       const reviews = dbReviewData.map((review) => review.get({ plain: true }));

@@ -72,6 +72,12 @@
   width: 250px;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
 .banner {
   background-color: #000;
   color: #fff;
@@ -136,8 +142,11 @@
   height: 100vh;
   padding-top: 70px;
 }
+
 .content {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card-content {

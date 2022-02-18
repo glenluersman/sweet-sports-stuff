@@ -34,11 +34,10 @@ Product.init(
       type: DataTypes.TEXT,
       allowNull: false
     },
-    // image: {
-    //   type: DataTypes.BLOB,
-
-
-    // }
+    product_image: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize,

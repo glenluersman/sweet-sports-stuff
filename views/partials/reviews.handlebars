@@ -1,24 +1,18 @@
 <div class="reviews">
   {{#each this}}
-  <section class="review">
-    <div class="meta">
-      {{user.username}} on {{format_date created_at}}
-    </div>
-    <div>
-      {{title}}
-    </div>
-    <div class="review-content">
-      {{content}}
-    </div>
-  </section>
+    <section class="review">
+      <div class="review-content">
+        {{content}}
+      </div>
+    </section>
   {{/each}}
 </div>
 {{#if loggedIn}}
-<form class="review-form">
-  <div class="content">
-    <label for="review">Review:</label>
-    <textarea name="review-body" id="review-text"></textarea>
-    <button type="submit">Submit</button>
-  </div>
-</form>
+  <form class="review-form">
+    <div class="content">
+      <label for="review">Review:</label>
+      <textarea name="review-body" id="review-text"></textarea>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 {{/if}}

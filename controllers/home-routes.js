@@ -48,7 +48,7 @@ router.get("/product/:id", (req, res) => {
     include: [
       {
         model: Review,
-        attributes: ["content", "user_id", "product_id"],
+        attributes: ["id", "content", "user_id", "product_id"],
         include: {
           model: User,
           attributes: ["username"],

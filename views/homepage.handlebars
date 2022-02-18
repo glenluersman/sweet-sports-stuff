@@ -4,9 +4,11 @@
   </div>
   <ol>
   {{#each products as |product| }}
+  <a href="review/{{id}}">
   <li>
   {{> product-info product}}
   </li>
+  </a>
   {{/each}}
   </ol>
 </section>

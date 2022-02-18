@@ -13,3 +13,12 @@
   </section>
   {{/each}}
 </div>
+{{#if loggedIn}}
+<form class="review-form">
+  <div class="content">
+    <label for="review">Review:</label>
+    <textarea name="review-body" id="review-text"></textarea>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+{{/if}}

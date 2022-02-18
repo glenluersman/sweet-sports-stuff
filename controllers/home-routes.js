@@ -26,24 +26,30 @@ router.get("/", (req, res) => {
     });
 });
 
-//get single item
-router.get("/review/:id", (req, res) => {
-  Category.findOne({
+//get single product
+router.get("/product/:id", (req, res) => {
+  Product.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "category_name"],
+    attributes: ["id", "product_name", "price", "product_desc"],
+    include: [
+      {
+        model: Review,
+        attributes: ["id", "content", "user_id", "product_id"],
+      },
+    ],
   })
-    .then((dbCategoryData) => {
-      if (!dbCategoryData) {
-        res.status(404).json({ message: "No category found with this id" });
+    .then((dbProductData) => {
+      if (!dbProductData) {
+        res.status(404).json({ message: "No product found with this id" });
         return;
       }
 
-      const category = dbCategoryData.get({ plain: true });
+      const product = dbProductData.get({ plain: true });
 
       res.render("product-details", {
-        category,
+        product,
         loggedIn: req.session.loggedIn,
       });
     })

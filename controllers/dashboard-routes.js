@@ -1,8 +1,12 @@
 const router = require("express").Router();
-const { Review } = require("../models");
+const { Review, User } = require("../models");
 const sequelize = require("../config/connection");
 
 const withAuth = require("../utils/auth");
+
+router.get("/user/:id", withAuth, (req, res) => {
+  User.findById(req.params.id);
+});
 
 //get all dashboard
 router.get("/", withAuth, (req, res) => {
@@ -23,7 +27,7 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/:id", withAuth, (req, res) => {
+/*router.get("/:id", withAuth, (req, res) => {
   Review.findByPk(req.params.id, {
     attributes: ["id", "title", "content"],
   })
@@ -42,6 +46,6 @@ router.get("/:id", withAuth, (req, res) => {
     .catch((err) => {
       res.status(500).json(err);
     });
-});
+});*/
 
 module.exports = router;

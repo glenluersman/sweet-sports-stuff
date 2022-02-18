@@ -136,10 +136,11 @@
   height: 100vh;
   padding-top: 70px;
 }
+
 .content {
   display: flex;
-  flex: 1 0 auto;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card-content {

@@ -5,7 +5,7 @@ const { Product, User, Category, Review } = require("../models");
 //get all
 router.get("/", (req, res) => {
   Product.findAll({
-    attributes: ["id", "product_name", "price", "product_desc"],
+    attributes: ["id", "product_name", "price", "product_desc", 'product_image'],
     include: [{ model: Category, attributes: ["category_name"] }],
   })
     .then((dbProductData) => {
@@ -28,22 +28,32 @@ router.get("/", (req, res) => {
 
 //get single item
 router.get("/review/:id", (req, res) => {
-  Category.findOne({
+  Product.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "category_name"],
+    attributes: ["id", "product_name", "price", "product_desc", "product_image"],
+    include: [
+      {
+        model: Review,
+        attributes: ["content", "user_id", "product_id"],
+        include: {
+          model: User,
+          attributes: ["username"]
+        }
+      }
+    ],
   })
-    .then((dbCategoryData) => {
-      if (!dbCategoryData) {
-        res.status(404).json({ message: "No category found with this id" });
+    .then((dbProductData) => {
+      if (!dbProductData) {
+        res.status(404).json({ message: "No product found with this id" });
         return;
       }
 
-      const category = dbCategoryData.get({ plain: true });
+      const product = dbProductData.get({ plain: true });
 
       res.render("product-details", {
-        category,
+        product,
         loggedIn: req.session.loggedIn,
       });
     })

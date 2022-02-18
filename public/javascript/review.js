@@ -9,10 +9,10 @@ async function reviewFormHandler(event) {
   ];
 
   if (review_text) {
-    const response = await fetch("/api/reviews", {
+    const response = await fetch("/api/review", {
       method: "POST",
       body: JSON.stringify({
-        id,
+        product_id,
         content,
       }),
       headers: {

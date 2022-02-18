@@ -12,7 +12,7 @@ async function reviewFormHandler(event) {
     const response = await fetch("/api/reviews", {
       method: "POST",
       body: JSON.stringify({
-        id,
+        product_id,
         content,
       }),
       headers: {

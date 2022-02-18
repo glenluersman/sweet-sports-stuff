@@ -5,7 +5,13 @@ const { Product, User, Category, Review } = require("../models");
 //get all
 router.get("/", (req, res) => {
   Product.findAll({
-    attributes: ["id", "product_name", "price", "product_desc", 'product_image'],
+    attributes: [
+      "id",
+      "product_name",
+      "price",
+      "product_desc",
+      "product_image",
+    ],
     include: [{ model: Category, attributes: ["category_name"] }],
   })
     .then((dbProductData) => {
@@ -27,21 +33,27 @@ router.get("/", (req, res) => {
 });
 
 //get single item
-router.get("/review/:id", (req, res) => {
+router.get("/product/:id", (req, res) => {
   Product.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "product_name", "price", "product_desc", "product_image"],
+    attributes: [
+      "id",
+      "product_name",
+      "price",
+      "product_desc",
+      "product_image",
+    ],
     include: [
       {
         model: Review,
         attributes: ["content", "user_id", "product_id"],
         include: {
           model: User,
-          attributes: ["username"]
-        }
-      }
+          attributes: ["username"],
+        },
+      },
     ],
   })
     .then((dbProductData) => {

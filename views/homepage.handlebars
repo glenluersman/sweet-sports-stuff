@@ -1,38 +1,14 @@
-<div class="wrapper">
 <section class="product-section">
   <div class="dept-title has-text-center">
-    <h3>Men's</h3>
+    <h3>Product's</h3>
   </div>
   <ol>
   {{#each products as |product| }}
+  <a href="review/{{id}}">
   <li>
   {{> product-info product}}
   </li>
+  </a>
   {{/each}}
   </ol>
 </section>
-<section class="product-section">
-  <div class="has-text-center">
-    <h3>Women's</h3>
-  </div>
-  <ol>
-  {{#each products as |product| }}
-  <li>
-  {{> product-info product}}
-  </li>
-  {{/each}}
-  </ol>
-</section>
-<section class="product-section">
-  <div>
-    <h3>Kid's</h3>
-  </div>
-  <ol>
-  {{#each products as |product| }}
-  <li>
-  {{> product-info product}}
-  </li>
-  {{/each}}
-  </ol>
-</section>
-</div>

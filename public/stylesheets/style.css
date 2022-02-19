@@ -9,8 +9,9 @@
   padding-left: 40px;
 }
 
-.nav-menu {
+.navbar-end {
   text-decoration: none;
+  padding-right: 40px;
 }
 
 .nav-link {
@@ -19,89 +20,12 @@
   font-weight: 500;
 }
 
-/*.main {
-  background: url("/images/osu-game.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  width: 100%;
-}*/
-
-.hero-container {
-  /* background-color: #ffffff9a; */
-  background: url("/images/osu-game.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  height: 600px;
-  width: 100%;
-  display: inline-flex;
-}
-
-.hero-title {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 3.5rem;
-  font-weight: 500;
-  text-shadow: 2px 2px #460000dc;
-  margin: 150px 0 5px 0;
-}
-
-.hero-subtitle {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 2rem;
-  text-shadow: 2px 2px #460000dc;
-  margin-bottom: 40px;
-}
-
-.hero-button {
-  background-color: rgba(0, 0, 0, 0.829);
-  color: white;
-  font-size: 1rem;
-}
-
-.hero-button:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #000;
-}
-
-.hero-merch-display {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.hero-merch-display-item {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 250px;
-}
-
-.banner {
-  background-color: #000;
-  color: #fff;
-  height: 35px;
-  width: 100%;
-  padding: 5px;
-}
-
-.banner-sale {
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.disclaimer {
-  color: rgba(255, 255, 255, 0.75);
-}
 
 .dept-title {
   text-align: center;
 }
 
 .product-section {
-  background-color: #fff;
   width: 100%;
 }
 
@@ -131,6 +55,11 @@
   padding: 25px;
   align-items: center;
   background-color: #dbdbdb;
+  opacity: 0.9;
+}
+
+.card:hover {
+  opacity: 1;
 }
 
 .card-image {
@@ -156,9 +85,16 @@
   text-align: center;
 }
 
+body {
+  background: url("/images/osu-game.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
+  background-size: contain, cover;
+}
+
 header {
   height: 50px;
-  flex-shrink: 0;
 }
 
 footer {

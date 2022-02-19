@@ -2,13 +2,13 @@ const { Category } = require('../models');
 
 const categorydata = [
   {
-    category_name: "mens"
+    category_name: "Men's"
   },
   {
-    category_name: "womens"
+    category_name: "Women's"
   },
   {
-    category_name: "kids"
+    category_name: "Kid's"
   }
 ];
 

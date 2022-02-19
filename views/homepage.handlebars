@@ -2,9 +2,9 @@
   <div class="dept-title has-text-center">
     <h3>Product's</h3>
   </div>
-  <ol>
+  <ol class="list is-flex is-flex-wrap-wrap">
   {{#each products as |product| }}
-  <a href="review/{{id}}">
+  <a href="/product/{{id}}">
   <li>
   {{> product-info product}}
   </li>

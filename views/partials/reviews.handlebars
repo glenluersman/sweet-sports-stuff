@@ -1,11 +1,14 @@
-<div class="reviews">
+<div class="reviews is-flex is-align-content-space-around is-size-7">
   {{#each this}}
-    <section class="review">
+    <section class="review box">
       <div class="review-content">
         {{content}}
       </div>
       <div class="meta">
-      - {{user.username}} on {{format_date created_at}}
+        -
+        {{user.username}}
+        on
+        {{format_date created_at}}
       </div>
     </section>
   {{/each}}

@@ -1,9 +1,9 @@
-<div>
+<div class="is-flex is-justify-content-space-around">
 {{> product-info product}}
 </div>
 
-<div>
-  <h4>Reviews</h4>
+<div class="px-6 mx-6">
+  <h4 class="is-flex is-justify-content-space-around is-size-3">Reviews</h4>
 {{> reviews product.reviews}}
 </div>
 
@@ -11,7 +11,7 @@
   <form class="review-form">
     <div class="content">
       <label for="review">Review:</label>
-      <textarea name="review-body" id="review-text"></textarea>
+      <textarea name="review-body" id="review-text" class="textarea"></textarea>
       <button type="submit">Submit</button>
     </div>
   </form>

@@ -125,7 +125,7 @@
 }
 
 .card {
-  height: 600px;
+  height: auto;
   width: 400px;
   margin: 15px;
   padding: 25px;

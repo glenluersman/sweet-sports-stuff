@@ -120,17 +120,22 @@
   margin: 50px 800px;
 }
 
+.dept-title {
+  font-size: 45px;
+}
+
 .card {
-  height: 300px;
-  width: 300px;
+  height: 600px;
+  width: 400px;
   margin: 15px;
   padding: 25px;
   align-items: center;
+  background-color: #dbdbdb;
 }
 
 .card-image {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
 }
 
 .card-image figure {
@@ -139,8 +144,10 @@
 
 .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .card-content {

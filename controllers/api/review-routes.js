@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
+  console.log(req.body);
   Review.create({
     content: req.body.content,
     user_id: req.session.user_id,

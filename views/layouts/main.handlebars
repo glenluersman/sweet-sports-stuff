@@ -31,10 +31,10 @@
                 </div>
             <ul class="navbar-menu">
                 <li class="navbar-item"><a class="nav-link" href="/">Shop</a></li>
-                <li class="navbar-item"><a class="nav-link" href="/login">Login</a></li>
                 {{#if loggedIn}}
-                <li class="navbar-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
                 <li class="navbar-item"><a class="nav-link" id="logout">Logout</a></li>
+                {{else}}
+                <li class="navbar-item"><a class="nav-link" href="/login">Login</a></li>
                 {{/if}}
             </ul>
             </nav>
@@ -42,12 +42,13 @@
         <main>
         {{{body}}}
         </main>
-        <footer>
-            <p class="">Copyright 2022. Group 4 Second Project.</p>
-        </footer>
     </div>
+    <footer>
+        <p>Copyright 2022. Group 4 Second Project.</p>
+    </footer>
 </body>
 
 {{#if loggedIn}}
 <script src="/javascript/logout.js"></script>
 {{/if}}
+<script src="/javascript/review.js"></script>

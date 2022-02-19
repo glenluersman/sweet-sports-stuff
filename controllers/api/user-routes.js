@@ -33,30 +33,30 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// router.post("/signup", (req, res) => {
-//   console.log(req.body);
-//   // User.create({
-//   //   username: req.body.username,
-//   //   email: req.body.email,
-//   //   password: req.body.password,
-//   // })
-//   //   .then((dbUserData) => {
-//   //     console.log(dbUserData);
-//   //     req.session.save(() => {
-//   //       req.session.user_id = dbUserData.id;
-//   //       req.session.username = dbUserData.username;
-//   //       req.session.loggedIn = true;
+router.post("/signup", (req, res) => {
+  console.log(req.body);
+  User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password,
+  })
+    .then((dbUserData) => {
+      console.log(dbUserData);
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
 
-//   //       res.json(dbUserData);
-//   //     });
-//   //   })
-//     // .catch((err) => {
-//     //   console.log(err);
-//     //   res.status(500).json(err);
-//     // });
-// });
+        res.json(dbUserData);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-router.post('/', (req, res)=> {
+router.post("/", (req, res) => {
   console.log(req.body);
   User.create({
     username: req.body.username,

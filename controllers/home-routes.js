@@ -33,7 +33,7 @@ router.get("/", (req, res) => {
 });
 
 //get single item
-router.get("/product/:id", (req, res) => {
+router.get("/review/:id", (req, res) => {
   Product.findOne({
     where: {
       id: req.params.id,

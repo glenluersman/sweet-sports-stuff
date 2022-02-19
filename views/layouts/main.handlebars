@@ -23,26 +23,26 @@
 </head>
 
 <body>
-    <div class="container">
         <header class="header has-navbar-fixed-top">
-            <nav class="navbar nav is-fixed-top">
+            <nav class="navbar nav has-dropdown is-fixed-top">
                 <div class="navbar-brand">
                     <h1 class="title is-1">Sweet Sports Stuff</h1>
                 </div>
-            <ul class="navbar-menu">
+                <div class="navbar-end">
                 <li class="navbar-item"><a class="nav-link" href="/">Shop</a></li>
                 {{#if loggedIn}}
                 <li class="navbar-item"><a class="nav-link" id="logout">Logout</a></li>
                 {{else}}
                 <li class="navbar-item"><a class="nav-link" href="/login">Login</a></li>
                 {{/if}}
-            </ul>
+                </div>
             </nav>
         </header>
+        <div class="container">
         <main>
         {{{body}}}
         </main>
-    </div>
+        </div>
     <footer>
         <p>Copyright 2022. Group 4 Second Project.</p>
     </footer>

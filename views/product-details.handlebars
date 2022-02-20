@@ -3,16 +3,16 @@
 </div>
 
 <div class="px-6 mx-6">
-  <h4 class="is-flex is-justify-content-space-around is-size-3">Reviews</h4>
+  <h4 class="title is-2 is-flex is-justify-content-space-around">Reviews</h4>
 {{> reviews product.reviews}}
 </div>
 
 {{#if loggedIn}}
   <form class="review-form">
     <div class="content">
-      <label for="review" class="box">Review:</label>
+      <label for="review" class="title is-2">Write A Review</label>
       <textarea name="review-body" id="review-text" class="textarea"></textarea>
-      <button type="submit">Submit</button>
+      <button type="submit" class="m-3">Submit</button>
     </div>
   </form>
 {{/if}}

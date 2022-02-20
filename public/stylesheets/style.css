@@ -1,0 +1,154 @@
+.nav {
+  padding: 15px 0 15px 0;
+  background-color: #bb0000;
+}
+
+.navbar-brand h1 {
+  font-weight: 700;
+  color: #fff;
+  padding-left: 40px;
+}
+
+.navbar-end {
+  text-decoration: none;
+  padding-right: 40px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: large;
+  font-weight: 500;
+}
+
+
+.dept-title {
+  text-align: center;
+}
+
+.product-section {
+  width: 100%;
+}
+
+.products-container h1 {
+  color: #000;
+  margin: 50px 650px;
+}
+
+.product-row {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.category-name {
+  margin: 50px 800px;
+}
+
+.dept-title {
+  font-size: 45px;
+}
+
+.card {
+  height: auto;
+  width: 400px;
+  margin: 15px;
+  padding: 25px;
+  align-items: center;
+  background-color: #dbdbdb;
+  opacity: 0.9;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.card-image {
+  width: 350px;
+  height: 350px;
+}
+
+.card-image figure {
+  margin: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.auth {
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.review {
+  opacity: 0.9;
+}
+
+body {
+  background: url("/images/osu-game.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
+  background-size: contain, cover;
+}
+
+header {
+  height: 50px;
+}
+
+footer {
+  background-color: #666;
+  color: white;
+  padding: 25px;
+  width: 100%;
+  height: 75px;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+form {
+  margin: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 25px;
+}
+
+form input {
+  margin-bottom: 10px;
+  width: 300px;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #bb0000;
+  border-radius: 5px;
+  width: 40%;
+  height: 35px;
+}

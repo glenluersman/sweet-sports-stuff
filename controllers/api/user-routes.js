@@ -34,7 +34,6 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/signup", (req, res) => {
-  console.log(req.body);
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -57,7 +56,6 @@ router.post("/signup", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
   User.create({
     username: req.body.username,
     email: req.body.email,

@@ -53,8 +53,6 @@ Sweet Sports Stuff is an ecommerce website dedicated to The Ohio State Universit
 
 - [ileachy](https://github.com/ileachy)
 
-- [ShatteredChungus](https://github.com/ShatteredChungus)
-
 ## <img id="questions" src="https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-dark/menu-categories/questions-alt.png?raw=true" style="height: 40px">
 
 - Feel free to open an issue or contact any of the collaborators if you have any questions about the repo.
